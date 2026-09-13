@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "UPDATE gateway_secrets.tor_access_tickets\n                   SET expires_at = NOW() - INTERVAL '1 second'\n                 WHERE id = $1",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Uuid"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "bb77bbab25d20485215a7bbf7e8fc89ccae9a3f753fe33e67e5e8b4e087a52fc"
+}

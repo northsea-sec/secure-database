@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "DELETE FROM gateway_secrets.ra_attestation_cache WHERE quote_hash = $1",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Bytea"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "d39fe3d2037c69772579831e5aac1eaf0fae3fac9a70622af2609ba02c1df001"
+}

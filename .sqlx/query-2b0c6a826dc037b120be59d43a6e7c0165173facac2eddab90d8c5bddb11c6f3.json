@@ -1,0 +1,12 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "DELETE FROM gateway_secrets.ra_attestation_cache WHERE expires_at < NOW()",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": []
+    },
+    "nullable": []
+  },
+  "hash": "2b0c6a826dc037b120be59d43a6e7c0165173facac2eddab90d8c5bddb11c6f3"
+}

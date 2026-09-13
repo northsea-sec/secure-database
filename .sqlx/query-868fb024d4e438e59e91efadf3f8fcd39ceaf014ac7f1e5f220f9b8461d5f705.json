@@ -1,0 +1,15 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "UPDATE gateway_secrets.tor_access_tickets\n                SET redeemed_operational_onion = $2,\n                    redeemed_at = NOW()\n                WHERE id = $1",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Uuid",
+        "Text"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "868fb024d4e438e59e91efadf3f8fcd39ceaf014ac7f1e5f220f9b8461d5f705"
+}

@@ -1,0 +1,20 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "SELECT COUNT(*) AS count\n                FROM gateway_secrets.tor_auth_credentials\n                WHERE disabled = FALSE",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "count",
+        "type_info": "Int8"
+      }
+    ],
+    "parameters": {
+      "Left": []
+    },
+    "nullable": [
+      null
+    ]
+  },
+  "hash": "36fbf6496152e207ec92a90e3b146139ffc5e1a0cecc7611492a0cfccafd7ac8"
+}

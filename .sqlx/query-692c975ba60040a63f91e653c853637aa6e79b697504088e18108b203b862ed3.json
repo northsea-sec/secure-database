@@ -1,0 +1,22 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO gateway_data.guard_health (guard_fpr, first_seen, last_ok, fail_count)\n            VALUES ($1, NOW(), NOW(), 1)\n            ON CONFLICT (guard_fpr) DO UPDATE SET\n                fail_count = guard_health.fail_count + 1\n            RETURNING fail_count\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "fail_count",
+        "type_info": "Int4"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text"
+      ]
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "692c975ba60040a63f91e653c853637aa6e79b697504088e18108b203b862ed3"
+}

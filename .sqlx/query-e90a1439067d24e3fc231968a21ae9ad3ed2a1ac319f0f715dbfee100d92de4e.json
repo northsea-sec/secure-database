@@ -1,0 +1,16 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "UPDATE gateway_secrets.tor_auth_credentials\n                SET onion_entry = $2,\n                    guard_nodes = $3,\n                    updated_at = NOW()\n                WHERE id = $1",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Uuid",
+        "Text",
+        "TextArray"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "e90a1439067d24e3fc231968a21ae9ad3ed2a1ac319f0f715dbfee100d92de4e"
+}

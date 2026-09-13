@@ -1,0 +1,88 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "SELECT id, onion_entry, tier, credential_hash, operational_onion, guard_nodes,\n                       created_at, updated_at, expires_at, disabled, rate_limit_per_minute,\n                       last_rotated_at\n                FROM gateway_secrets.tor_auth_credentials\n                ORDER BY created_at ASC\n                LIMIT $1",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 1,
+        "name": "onion_entry",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "tier",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "credential_hash",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 4,
+        "name": "operational_onion",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 5,
+        "name": "guard_nodes",
+        "type_info": "TextArray"
+      },
+      {
+        "ordinal": 6,
+        "name": "created_at",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 7,
+        "name": "updated_at",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 8,
+        "name": "expires_at",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 9,
+        "name": "disabled",
+        "type_info": "Bool"
+      },
+      {
+        "ordinal": 10,
+        "name": "rate_limit_per_minute",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 11,
+        "name": "last_rotated_at",
+        "type_info": "Timestamptz"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int8"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "8fd21b606b64ac206077a8281fc6373b5687724fdf1991d02d3ae112b88664f5"
+}

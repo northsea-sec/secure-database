@@ -1,0 +1,20 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "SELECT COUNT(*) AS count\n                FROM gateway_secrets.tor_auth_sessions\n                WHERE expires_at IS NULL OR expires_at > NOW()",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "count",
+        "type_info": "Int8"
+      }
+    ],
+    "parameters": {
+      "Left": []
+    },
+    "nullable": [
+      null
+    ]
+  },
+  "hash": "80faf7c61339e4f759879a1a0af7017e54bfe5d5f08b20b0bb5e83f90afb3ab3"
+}

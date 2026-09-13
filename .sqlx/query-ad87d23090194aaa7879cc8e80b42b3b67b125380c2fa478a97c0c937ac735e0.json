@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "DELETE FROM gateway_secrets.ra_nonce_log WHERE seen_at < NOW() - ($1::bigint * INTERVAL '1 second')",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int8"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "ad87d23090194aaa7879cc8e80b42b3b67b125380c2fa478a97c0c937ac735e0"
+}

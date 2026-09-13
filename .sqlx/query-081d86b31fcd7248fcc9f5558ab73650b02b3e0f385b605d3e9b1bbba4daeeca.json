@@ -1,0 +1,17 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO gateway_data.guard_health (\n                guard_fpr, first_seen, last_ok, fail_count, tee_capable, tee_label, tee_policy, tee_verified_at\n            ) VALUES ($1, NOW(), NOW(), 0, $2, $3, $4, NOW())\n            ON CONFLICT (guard_fpr) DO UPDATE SET\n                tee_capable = EXCLUDED.tee_capable,\n                tee_label = EXCLUDED.tee_label,\n                tee_policy = EXCLUDED.tee_policy,\n                tee_verified_at = NOW()\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Bool",
+        "Text",
+        "Text"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "081d86b31fcd7248fcc9f5558ab73650b02b3e0f385b605d3e9b1bbba4daeeca"
+}

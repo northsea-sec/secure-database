@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "DELETE FROM gateway_secrets.ra_nonce_log WHERE nonce_digest = $1",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Bytea"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "625867ea427fa091b44c0c68cc06b028d3f0016b4d51c39321c8ecb05f6cf44a"
+}
